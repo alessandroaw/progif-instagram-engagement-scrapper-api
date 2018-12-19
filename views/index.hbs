@@ -43,7 +43,7 @@
           <h2>Sign up</h2>
           <hr class="bg-light">
           <img width="100%" src="assets/SIGNUP.png">
-          <p class="mb-5">Untuk menggunakan API, user perlu terlebih dahulu mendaftarkan dirinya melalui {{url}}/users dengan mengirimkan POST request yang berisikan email dan password dari user dalam bentuk JSON. Gambar di atas adalah contoh pendaftaran melalui POST request Postman:</p>
+          <p class="mb-5">Untuk menggunakan API, user perlu terlebih dahulu mendaftarkan dirinya melalui <a href="{{url}}/users">{{url}}/users</a> dengan mengirimkan POST request yang berisikan email dan password dari user dalam bentuk JSON. Gambar di atas adalah contoh pendaftaran melalui POST request Postman:</p>
         </div>
       </div>
       <div class="row">
@@ -51,7 +51,7 @@
           <h2>Log in</h2>
           <hr class="bg-light">
           <img width="100%" src="assets/LOGIN.png">
-          <p class="mb-5">Jika user telah memiliki akun, user dapat melakukan login&nbsp; melalui {{url}}/users/login dengan mengirimkan POST request yang berisikan email dan password dari user dalam bentuk JSON. Gambar di atas adalah contoh log in melalui POST request Postman:</p>
+          <p class="mb-5">Jika user telah memiliki akun, user dapat melakukan login&nbsp; melalui <a href="{{url}}/users/login">{{url}}/users/login</a> dengan mengirimkan POST request yang berisikan email dan password dari user dalam bentuk JSON. Gambar di atas adalah contoh log in melalui POST request Postman:</p>
         </div>
       </div>
       <div class="row">
@@ -67,7 +67,7 @@
           <h2>Get Endorser Stat</h2>
           <hr class="bg-light">
           <img width="100%" src="assets/GET_ENDORSER.png">
-          <p class="mb-5">Setelah user selesai melakukan log in atau sign up, user akan mendapatkan token yang tersimpan pada komponen x-auth pada response&nbsp; header. Token yang didapatkan ini perlu untuk disematkan pada request header ketika melakukan request. Untuk mendapatkan data Endorser, dapat dilakukan dengan melakukan GET request dengan format berikut ini<br>{{url}}/endorser/&lt;username ig endorser&gt;&nbsp;</p>
+          <p class="mb-5">Setelah user selesai melakukan log in atau sign up, user akan mendapatkan token yang tersimpan pada komponen x-auth pada response&nbsp; header. Token yang didapatkan ini perlu untuk disematkan pada request header ketika melakukan request. Untuk mendapatkan data Endorser, dapat dilakukan dengan melakukan GET request dengan format berikut ini<br> <a href="{{url}}/endorser/<userame ig endorser>">{{url}}/endorser/&lt;username ig endorser&gt;&nbsp;</a></p>
         </div>
       </div>
       <div class="row">
@@ -75,9 +75,9 @@
           <h2>Log out</h2>
           <hr class="bg-light">
           <img width="100%" src="assets/LOGOUT.png">
-          <p class="mb-5">Untuk menghapus token yang telah didapatkan perlu dilakukan DELETE request melalui {{url}}/users/me/token dengan memasang token pada header request</p>
         </div>
       </div>
+      <p class="mb-5">Untuk menghapus token yang telah didapatkan perlu dilakukan DELETE request melalui <a href="{{url}}/users/me/token">{{url}}/users/me/token</a> dengan memasang token pada header request</p>
       <div class="row">
         <div class="col-md-12">
           <h2>ABOUT</h2>

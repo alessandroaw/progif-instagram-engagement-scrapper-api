@@ -21,8 +21,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
-	var url = 'https://localhost:3000'
-	res.render('indes.hbs', {url});
+	var url = 'https://frozen-ravine-57663.herokuapp.com';
+	res.render('index.hbs', {url});
 });
 
 // =================================
