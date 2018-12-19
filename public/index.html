@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- PAGE settings -->
+  <link rel="icon" href="https://templates.pingendo.com/assets/Pingendo_favicon.ico">
+  <title>Restaurant Aquamarine - Pingendo template</title>
+  <meta name="description" content="Free Bootstrap 4 Pingendo Aquamarine template for restaurant and food">
+  <meta name="keywords" content="Pingendo restaurant food aquamarine free template bootstrap 4">
+  <!-- CSS dependencies -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="aquamarine.css" type="text/css">
+  <!-- Script: Make my navbar transparent when the document is scrolled to top -->
+  <script src="js/navbar-ontop.js"></script>
+  <!-- Script: Animated entrance -->
+  <script src="js/animate-in.js"></script>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar-expand-md navbar-dark bg-primary fixed-top text-center shadow" style="">
+    <div class="container">
+      <h5 style=""><b>Instagram Engagement Calculator</b></h5>
+    </div>
+  </nav>
+  <!-- Cover -->
+  <!-- Intro -->
+  <!-- Gallery -->
+  <!-- Menu -->
+  <div class="py-5 text-center" id="menu" style="background-image: url(&quot;assets/restaurant/cover_light_4.jpg&quot;);">
+    <div class="container p-4 bg-aquamarine animate-in-down">
+      <div class="row">
+        <div class="col-md-12" style="">
+          <h2>Getting Started</h2>
+          <hr class="bg-light">
+          <p class="mb-5" contenteditable="true">Instagram Engagement Calculator adalah API yang menyediakan informasi mengenai seberapa menarik akun&nbsp; instagram seseorang untuk dijadikan celebrity endorsement<b style=""><i>&nbsp;&nbsp;</i></b></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Sign up</h2>
+          <hr class="bg-light">
+          <img width="100%" src="assets/SIGNUP.png">
+          <p class="mb-5">Untuk menggunakan API, user perlu terlebih dahulu mendaftarkan dirinya melalui {{#url}}/users dengan mengirimkan POST request yang berisikan email dan password dari user dalam bentuk JSON. Gambar di atas adalah contoh pendaftaran melalui POST request Postman:</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Log in</h2>
+          <hr class="bg-light">
+          <img width="100%" src="assets/LOGIN.png">
+          <p class="mb-5">Jika user telah memiliki akun, user dapat melakukan login&nbsp; melalui {{#url}}/users/login dengan mengirimkan POST request yang berisikan email dan password dari user dalam bentuk JSON. Gambar di atas adalah contoh log in melalui POST request Postman:</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Autentikasi</h2>
+          <hr class="bg-light">
+          <img width="100%" src="assets/AUTENTIKASI.png">
+          <p class="mb-5">Jika sign up atau login berhasil dilakukan, token akan didapatkan pada atribut x-auth yang berada di respone header. Token ini yang nantinya akan digunakan untuk melakukan autentikasi request oleh user.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12" style="">
+          <h2>Get Endorser Stat</h2>
+          <hr class="bg-light">
+          <img width="100%" src="assets/GET_ENDORSER.png">
+          <p class="mb-5">Setelah user selesai melakukan log in atau sign up, user akan mendapatkan token yang tersimpan pada komponen x-auth pada response&nbsp; header. Token yang didapatkan ini perlu untuk disematkan pada request header ketika melakukan request. Untuk mendapatkan data Endorser, dapat dilakukan dengan melakukan GET request dengan format berikut ini<br>{{#url}}/endorser/&lt;username ig endorser&gt;&nbsp;</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Log out</h2>
+          <hr class="bg-light">
+          <img width="100%" src="assets/LOGOUT.png">
+          <p class="mb-5">Untuk menghapus token yang telah didapatkan perlu dilakukan DELETE request melalui {{#url}}/users/me/token dengan memasang token pada header request</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h2>ABOUT</h2>
+          <hr class="bg-light">
+          <p class="mb-5">API ini dibuat oleh<br>Alessandro Aria Wibowo<br>18216002</p>
+        </div>
+      </div>
+    </div>
+    <!-- Carousel reviews -->
+    <!-- Carousel venue -->
+    <!-- Events -->
+    <!-- Parallax section -->
+    <!-- Footer -->
+    <!-- JavaScript dependencies -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" style=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- Script: Smooth scrolling between anchors in the same page -->
+    <script src="js/smooth-scroll.js" style=""></script>
+  </div>
+  <pingendo onclick="window.open('https://pingendo.com/', '_blank')" style="cursor:pointer;position: fixed;bottom: 20px;right:20px;padding:4px;background-color: #00b0eb;border-radius: 8px; width:220px;display:flex;flex-direction:row;align-items:center;justify-content:center;font-size:14px;color:white">Made with Pingendo Free&nbsp;&nbsp;<img src="https://pingendo.com/site-assets/Pingendo_logo_big.png" class="d-block" alt="Pingendo logo" height="16"></pingendo>
+</body>
+
+</html>

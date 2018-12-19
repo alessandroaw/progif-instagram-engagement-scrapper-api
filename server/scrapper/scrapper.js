@@ -1,8 +1,5 @@
 const request = require('request');
 const cheerio = require('cheerio');
-// const _ = require('lodash');
-
-// var u = 'alessandro.aw';
 
 var getUserData = (username) => {
   var url = `https://phlanx.com/engagement-calculator?insta=${username}`;
@@ -15,7 +12,12 @@ var getUserData = (username) => {
         //
         var temp = $('.invalid-engagement-result').text();
         if(temp) {
-          reject(temp);
+          var error = {
+            ig: username,
+            code:400,
+            message: temp
+          }
+          reject(error);
         }
 
         // follower

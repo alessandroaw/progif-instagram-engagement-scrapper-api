@@ -6,13 +6,28 @@ const {ObjectID} = require('mongodb');
 var {mongoose} =  require('./db/mongoose');
 var {User} = require('./models/user');
 var {authenticate} = require('./middleware/authenticate');
+const hbs = require('hbs');
+const path = require('path');
 
 
 
 var app = express();
 const port = process.env.PORT || 3000;
 
+
+app.set('view engine', 'hbs');
+app.use(express.static(path.join(__dirname, '../public')));
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.get('/', (req, res) => {
+	var url = 'https://localhost:3000'
+	res.render('indes.hbs', {url});
+});
+
+// =================================
+// AUTHENTICATION
+// =================================
 
 // Sign-up {email, password}
 app.post('/users', (req, res) => {
@@ -36,7 +51,11 @@ app.post('/users/login', (req, res) => {
 			res.header('x-auth', token).send(user);
 		});
 	}).catch((e) => {
-		res.status(400).send();
+    var error = {
+      code:400,
+      message: e
+    }
+    res.status(400).send(e);
 	});
 });
 
@@ -49,6 +68,10 @@ app.delete('/users/me/token', authenticate, (req, res) => {
 	})
 });
 
+
+// =================================
+// GET ENDORSER DATA DATA
+// =================================
 // app.get('/',)
 app.get('/endorser/:username', authenticate, (req, res) => {
   var username = req.params.username;

@@ -11,7 +11,11 @@ var authenticate = (req, res, next) => {
 		req.token = token;
 		next();
 	}).catch((e) => {
-		res.status(401).send();
+		var error = {
+			code:401,
+			message:'Not Authorized! check {insert HOME URI}'
+		};
+		res.status(401).send(error);
 	});
 };
 
