@@ -13,7 +13,7 @@ var authenticate = (req, res, next) => {
 	}).catch((e) => {
 		var error = {
 			code:401,
-			message:'Not Authorized! check {insert HOME URI}'
+			message:'Not Authorized! check https://frozen-ravine-57663.herokuapp.com/'
 		};
 		res.status(401).send(error);
 	});
